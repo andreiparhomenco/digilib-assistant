@@ -43,6 +43,6 @@ Thumbs.db
 memory-bank/
 
 # Other
-requirements.txt
+# requirements.txt - NEEDED FOR DOCKER BUILD!
 CHANGELOG.md
 
