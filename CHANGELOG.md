@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.5.1] - 2025-11-06 - Railway Deployment Fixes 🔧
+
+### Fixed
+- 🐛 **Critical:** Fixed Dockerfile using incorrect requirements file (requirements-minimal.txt → requirements.txt)
+- 🔧 Improved environment variable loading with `load_dotenv(override=False)` for Railway compatibility
+- 📝 Enhanced error logging with full traceback for debugging Railway issues
+- ✅ Better configuration validation messages showing where to check variables (Railway/Local)
+- 🚀 Added detailed startup logging for troubleshooting deployment
+
+### Technical Details
+- **Issue:** Docker build was using old `requirements-minimal.txt` which didn't exist
+- **Fix:** Updated Dockerfile to use correct `requirements.txt`
+- **Impact:** Railway deployment should now succeed ✅
+
+---
+
 ## [0.5.0] - 2025-11-06 - Railway Deployment Ready 🚂
 
 ### Added

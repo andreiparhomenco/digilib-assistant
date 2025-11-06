@@ -62,15 +62,19 @@ def main() -> None:
     # Validate configuration
     if not validate_config():
         print("\n❌ Configuration validation failed!")
-        print("Please create a .env file with TELEGRAM_BOT_TOKEN")
-        print("You can copy .env.example to .env and fill in your token")
-        return
+        print("Please set TELEGRAM_BOT_TOKEN environment variable")
+        print("Check Railway Variables tab and make sure token is set")
+        import sys
+        sys.exit(1)
 
     print("\n🔧 Creating bot application...")
+    print(f"   Using token: {TELEGRAM_BOT_TOKEN[:10]}...{TELEGRAM_BOT_TOKEN[-4:]}")
 
     try:
         # Create the Application
+        print("   Connecting to Telegram API...")
         application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+        print("✅ Bot application created successfully")
 
         # Define conversation handler with states
         conv_handler = ConversationHandler(
@@ -129,9 +133,13 @@ def main() -> None:
         application.run_polling(allowed_updates=Update.ALL_TYPES)
 
     except Exception as e:
-        logger.error(f"Failed to start bot: {e}")
+        logger.error(f"Failed to start bot: {e}", exc_info=True)
         print(f"\n❌ Error starting bot: {e}")
-        return
+        print(f"   Error type: {type(e).__name__}")
+        import traceback
+        traceback.print_exc()
+        import sys
+        sys.exit(1)
 
 
 if __name__ == '__main__':
