@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# Tests
+tests/
+*.test.py
+.pytest_cache/
+
+# Development
+.DS_Store
+Thumbs.db
+*.log
+
+# Memory Bank (not needed in production)
+memory-bank/
+
+# Other
+requirements.txt
+CHANGELOG.md
+

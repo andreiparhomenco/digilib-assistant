@@ -235,10 +235,12 @@ digilib-assistant/
 - [ ] Documentation
 
 ### Phase 7: Deployment
-- [ ] Railway hosting
-- [ ] CI/CD pipeline
-- [ ] Health checks
-- [ ] Monitoring
+- [x] Dockerfile для Railway
+- [x] railway.json конфигурация
+- [x] .dockerignore оптимизация
+- [x] DEPLOY.md инструкции
+- [ ] CI/CD pipeline (optional)
+- [x] Health checks (в Dockerfile)
 
 ## 📊 Technology Stack
 
@@ -267,6 +269,22 @@ mypy src/
 pytest tests/
 ```
 
+## 🚂 Deployment на Railway
+
+**Инструкции:** См. [DEPLOY.md](DEPLOY.md)
+
+### Быстрый деплой:
+
+1. Перейди на https://railway.app
+2. "Deploy from GitHub repo"
+3. Выбери этот репозиторий
+4. Добавь environment variables
+5. Railway автоматически соберет Docker и задеплоит!
+
+**Подробнее:** [DEPLOY.md](DEPLOY.md)
+
+---
+
 ## 📝 Next Steps
 
 1. ✅ Technology Validation Complete
@@ -275,7 +293,7 @@ pytest tests/
 4. ✅ Phase 4: Yandex GPT Integration Complete
 5. ⏭️ Phase 5: Data & Security (Database, Analytics)
 6. ⏭️ Phase 6: Testing & Code Quality
-7. ⏭️ Phase 7: Railway Deployment
+7. ✅ Phase 7: Railway Deployment Ready
 
 ## 🤝 Contributing
 
@@ -291,6 +309,6 @@ For issues and questions, please refer to project documentation in `memory-bank/
 
 ---
 
-**Version:** 0.4.1 (Tested and Working)  
+**Version:** 0.5.0 (Railway Ready)  
 **Last Updated:** 2025-11-06  
-**Status:** ✅ FULLY OPERATIONAL - Educational + Creative Modes with Yandex GPT
+**Status:** ✅ PRODUCTION READY - Full deployment support with Docker + Railway

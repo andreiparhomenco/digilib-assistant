@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.5.0] - 2025-11-06 - Railway Deployment Ready 🚂
+
+### Added
+- 🐳 **Dockerfile** для production deployment
+- 📋 **.dockerignore** для оптимизации образа
+- ⚙️ **railway.json** конфигурация для Railway
+- 📖 **DEPLOY.md** - полная инструкция по деплою
+- 🏥 Health checks в Docker контейнере
+- 🔒 Non-root user для безопасности
+
+### Changed
+- 📝 Обновлен README.md с секцией deployment
+- 🎯 Phase 7 (Deployment) завершена
+
+### Technical Details
+- **Docker:** Python 3.13-slim base image
+- **Railway:** Auto-deploy из GitHub
+- **Security:** Non-root user, minimal dependencies
+- **Optimization:** Multi-stage caching, .dockerignore
+
+### Deployment
+- ✅ Ready для Railway
+- ✅ Docker образ оптимизирован
+- ✅ Auto-restart на failure
+- ✅ Environment variables support
+
+---
+
 ## [0.4.1] - 2025-11-06
 
 ### Added
